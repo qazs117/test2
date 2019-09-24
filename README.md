@@ -39,4 +39,59 @@ printf("%s\n", c[i]);}
 
 8.#include<stdio.h> #include<stdlib.h> int main(int n, char* v[]) { int a, b, c; if (n < 4){ printf("매개변수가 모자라요.\n"); exit(0); } a = atoi(v[1]); b = atoi(v[3]); switch (v[2][0]) { case '*': c = a * b; break; default: break; } printf("%d\n", c); }
 
-9.
+9.#include<stdio.h>
+
+struct User {
+
+	
+
+	char n[80];
+	
+	int age;
+
+	char t[80];
+
+};
+
+void main() {
+
+	struct User we[2] = {
+
+		{"sdds",18 , "qazs@naver.com"},{"stfe",17 ,"sdwse@naver.com"}
+
+	};
+
+	printf("%s\t%d\t%s\n", we[0].n, we[0].age, we[0].t);
+
+	printf("%s\t%d\t%s\n", we[1].n, we[1].age, we[1].t);
+
+	}
+
+10.#include<stdio.h>
+
+struct User {
+	
+	char n[80];
+	
+	int age;
+
+	char t[80];
+};
+
+void pr(struct User* we) {
+
+	printf("%s %d %s\n", we->n, we->age, we->t);
+
+	we++;
+
+	printf("%s %d %s\n", we->n, we->age, we->t);
+
+}
+
+int main() {
+
+	struct User we[2] = { {"jcshim", 19, "wlsd@naver.com"},{ "jbshim", 20, "sdds@naver.com" } };
+
+	pr(we);
+
+}
