@@ -44,54 +44,51 @@ printf("%s\n", c[i]);}
 struct User {
 
 	
-
-	char n[80];
+char n[80];
 	
-	int age;
+int age;
 
-	char t[80];
+char t[80];
 
 };
 
 void main() {
 
-	struct User we[2] = {
+struct User we[2] = {
 
-		{"sdds",18 , "qazs@naver.com"},{"stfe",17 ,"sdwse@naver.com"}
+{"sdds",18 , "qazs@naver.com"},{"stfe",17 ,"sdwse@naver.com"}
+};
 
-	};
-
-	printf("%s\t%d\t%s\n", we[0].n, we[0].age, we[0].t);
-
+printf("%s\t%d\t%s\n", we[0].n, we[0].age, we[0].t);
 	printf("%s\t%d\t%s\n", we[1].n, we[1].age, we[1].t);
 
-	}
+}
 
 10.#include<stdio.h>
 
 struct User {
 	
-	char n[80];
+char n[80];
 	
-	int age;
+int age;
 
-	char t[80];
+char t[80];
 };
 
 void pr(struct User* we) {
 
-	printf("%s %d %s\n", we->n, we->age, we->t);
+printf("%s %d %s\n", we->n, we->age, we->t);
 
-	we++;
+we++;
 
-	printf("%s %d %s\n", we->n, we->age, we->t);
+printf("%s %d %s\n", we->n, we->age, we->t);
 
 }
 
 int main() {
 
-	struct User we[2] = { {"jcshim", 19, "wlsd@naver.com"},{ "jbshim", 20, "sdds@naver.com" } };
+struct User we[2] = { {"jcshim", 19, "wlsd@naver.com"},{ "jbshim", 20, "sdds@naver.com" } };
 
-	pr(we);
+pr(we);
 
 }
